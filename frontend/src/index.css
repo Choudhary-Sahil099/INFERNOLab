@@ -1,0 +1,84 @@
+@import "tailwindcss";
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cursor {
+  position: fixed;
+
+  width: 12px;
+  height: 12px;
+
+  background: #ff6b00;
+
+  border-radius: 9999px;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 12px #ff6b00,
+    0 0 30px rgba(255, 100, 0, 0.7);
+
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background 0.2s ease;
+}
+
+.cursor-ring {
+  position: fixed;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 120, 0, 0.5);
+
+  border-radius: 9999px;
+
+  pointer-events: none;
+
+  z-index: 9998;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease;
+
+  backdrop-filter: blur(2px);
+}
+
+:root {
+  --ember: #FF4500;
+  --lava: #FF6B00;
+  --gold: #FFB347;
+
+  --dark: #0d0500;
+  --stone: #1e1612;
+
+  --text: #f0d0a0;
+  --muted: #9a7a5a;
+}
