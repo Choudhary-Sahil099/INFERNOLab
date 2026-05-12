@@ -3,6 +3,15 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
+* {
+  -ms-overflow-style: none;
+}
 body {
   font-family: "Rajdhani", sans-serif;
   background: var(--dark);

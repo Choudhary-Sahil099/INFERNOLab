@@ -85,7 +85,7 @@ const Footer = () => {
         >
 
           <a
-            href="#"
+            href="https://github.com/Choudhary-Sahil099"
             className="
               flex
               h-12
@@ -112,7 +112,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.linkedin.com/in/sahil-choudhary-478a682b6/"
             className="
               flex
               h-12
@@ -139,7 +139,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:sahil@example.com"
+            href="mailto:sahilchoudhary35689@gmail.com"
             className="
               flex
               h-12

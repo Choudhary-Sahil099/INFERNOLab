@@ -8,12 +8,18 @@ import Hero from "./sections/hero/Hero";
 import Works from "./sections/Works";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <div className="app">
       <Cursor />
       <ParticleBackground />
+       <Toaster
+        position="top-right"
+        richColors
+        closeButton
+      />
       <div className="app-container">
         <Navbar />
         <main className="main-content">

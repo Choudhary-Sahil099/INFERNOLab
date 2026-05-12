@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { toast } from "sonner";
 import {
   Mail,
   Link,
@@ -65,7 +65,7 @@ const Contact = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/contact",
+        "https://infernolab.onrender.com/api/contact",
         {
           method: "POST",
 
@@ -80,7 +80,7 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
 
         setFormData({
           name: "",
@@ -88,12 +88,12 @@ const Contact = () => {
           message: "",
         });
       } else {
-        alert(data.message);
+        toast.error(data.message);
       }
     } catch (error) {
       console.log(error);
 
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -300,7 +300,6 @@ const Contact = () => {
             ))}
           </motion.div>
 
-          {/* RIGHT SIDE */}
           <motion.div
             initial={{
               opacity: 0,
@@ -395,8 +394,6 @@ const Contact = () => {
                   "
                 />
               </motion.div>
-
-              {/* EMAIL */}
               <motion.div variants={itemVariants}>
                 <label
                   className="
@@ -447,7 +444,6 @@ const Contact = () => {
                 />
               </motion.div>
 
-              {/* MESSAGE */}
               <motion.div variants={itemVariants}>
                 <label
                   className="
@@ -499,7 +495,6 @@ const Contact = () => {
                 />
               </motion.div>
 
-              {/* BUTTON */}
               <motion.button
                 type="submit"
                 disabled={loading}
@@ -535,7 +530,7 @@ const Contact = () => {
                   duration-300
 
                   hover:shadow-[0_0_60px_rgba(255,80,0,0.4)]
-
+                  hover:cursor-pointer
                   disabled:opacity-50
                 "
               >
@@ -546,7 +541,6 @@ const Contact = () => {
                   className="
                     transition-transform
                     duration-300
-
                     group-hover:translate-x-1
                   "
                 />

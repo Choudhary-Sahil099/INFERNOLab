@@ -116,6 +116,7 @@ const Works = () => {
             gap-8
             md:grid-cols-2
             xl:grid-cols-3
+            hover:cursor-pointer
           "
         >
           {works.map((work, index) => (

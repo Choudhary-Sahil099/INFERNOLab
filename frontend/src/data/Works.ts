@@ -33,7 +33,7 @@ export const works = [
       "Storage Engine",
     ],
 
-    github: "#",
+    github: "https://github.com/Choudhary-Sahil099/MiniKv",
   },
 
   {
@@ -45,7 +45,7 @@ export const works = [
 
     technologies: ["React", "Three.js", "TailwindCSS", "TypeScript", "R3F"],
 
-    github: "#",
+    github: "https://github.com/Choudhary-Sahil099/INFERNOLab",
   },
   {
     title: "Woordie",
@@ -87,6 +87,6 @@ export const works = [
       "Yjs",
     ],
 
-    github: "#",
+    github: "https://github.com/Choudhary-Sahil099/SyncSpace",
   },
 ];

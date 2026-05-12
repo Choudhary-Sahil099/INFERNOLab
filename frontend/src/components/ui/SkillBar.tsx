@@ -19,6 +19,7 @@ const SkillBar = ({
             uppercase
             tracking-[0.3em]
             text-orange-100/80
+            
           "
         >
           {skill}
